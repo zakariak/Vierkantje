@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+  <style>
+
+    input{
+      padding: 5px;
+      margin: 20px;
+    }
+
+    #div1{
+      margin-top: 15px;
+      margin-bottom: 15px;
+      transition: all 2.0s ease-out;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <input id="breedte" type="text" placeholder="Breedte">Breedte (Pixels)
+    <br>
+    <input id="hoogte" type="text" placeholder="Hoogte">Hoogte (Pixels)
+    <br>
+    <select id="dropdown">
+     <option value="Red">Rood</option>
+     
+     <option value="Gray">Grijs</option>
+     <option value="Yellow">Geel</option>
+     <option value="Purple">Paars</option>
+     <option value="Blue">Blauw</option>
+     <option value="Orange">Oranje</option>
+     
+   </select>
+   <br><br>
+   <button onclick="button()">Klik</button>
+   <div id="div1"></div>
+ </div>
+
+ <script type="text/javascript">
+  function button() {
+    var breed = document.getElementById("breedte").value;
+    var hoog = document.getElementById("hoogte").value;
+    document.getElementById("div1").style.width = breed + "px";
+    document.getElementById("div1").style.height = hoog + "px";
+
+    var background = document.getElementById('dropdown').value;
+    document.getElementById('div1').style.backgroundColor = background;
+  }
+
+</script>
+</body>
+</html>
